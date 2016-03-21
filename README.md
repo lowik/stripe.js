@@ -27,8 +27,13 @@ See [Stripe.js doc](https://stripe.com/docs/stripe.js)
 # Usage
 
 ```js
-import { cardType } from 'stripe.js';
-const type = cardType('42424242424242');
+import { cardType, formatCardNumber } from 'stripe.js';
+
+const type = cardType('4242424242424242');
+// type === 'visa'
+
+const formattedCardNumber = formatCardNumber('4242424242424242');
+// formattedCardNumber === '4242 4242 4242 4242'
 ```
 
 # Install
